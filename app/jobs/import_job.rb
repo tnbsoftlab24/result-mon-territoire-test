@@ -15,8 +15,8 @@ class ImportJob < ApplicationJob
         csv << row
       end
     end
-    # input_file.close
-    # output_file.close
+    input_file.close
+    output_file.close
 
     csv_file_path = File.read(Rails.root.join("spec", "fixtures", "file-generate-in-utf8-epcicom.csv"))
     csv_intercommunalities = CSV.parse(csv_file_path, col_sep: ';', headers: true,  encoding: "utf-8")
