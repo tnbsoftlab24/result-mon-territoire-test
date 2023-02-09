@@ -1,0 +1,2 @@
+<%- headers = ['code_insee','name'] -%><%= CSV.generate_line headers, :col_sep => ";"  %><%- @communes.each do |commune| -%><%= CSV.generate_line([commune.code_insee, commune.name], :col_sep => ";") -%>
+<%- end -%>
