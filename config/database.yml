@@ -23,22 +23,3 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
-
-
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#   timeout: 5000
-
-# development:
-#   <<: *default
-#   database: apply_developpement
-
-# test:
-#   <<: *default
-#   database: apply_test
-
-# production:
-#   <<: *default
-#   database: apply
