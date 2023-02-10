@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_06_152447) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_06_133221) do
   create_table "communes", force: :cascade do |t|
     t.string "Intercommunality"
     t.string "street"
@@ -21,7 +21,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_06_152447) do
     t.integer "code_insee"
     t.integer "street_id"
     t.integer "population"
-    t.json "geometry"
     t.index ["intercommunality_id"], name: "index_communes_on_intercommunality_id"
     t.index ["street_id"], name: "index_communes_on_street_id"
   end
